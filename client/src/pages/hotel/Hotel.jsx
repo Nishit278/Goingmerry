@@ -19,7 +19,7 @@ const Hotel = () => {
   //  console.log(location);
   const id = location.pathname.split("/")[2];
   // console.log(id);
-  const { data, error, loading, reFetch } = useFetch(`/hotels/find/${id}`);
+  const { data, error, loading, reFetch } = useFetch(`/api/hotels/find/${id}`);
   // console.log(data);
   let { dates, options } = useContext(SearchContext);
   const { user } = useContext(AuthContext);

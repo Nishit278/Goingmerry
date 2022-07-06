@@ -9,6 +9,7 @@ import cookieParder from "cookie-parser";
 import cors from "cors";
 import path from "path";
 
+const port = process.env.PORT || 5000;
 const app = express();
 dotenv.config();
 
@@ -46,14 +47,19 @@ app.use((err, req, res, next) => {
 });
 
 //server production assets
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join("client/build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join("client/build")));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+//   });
+// }
+if (process.env.NODE_ENV === "production" || process.env.NODE_ENV === "staging") {
+ app.use(express.static("client/build"));
+ app.get("*", (req, res) => {
+ res.sendFile(path.join(__dirname + "/client/build/index.html"));
+ });
 }
-
-app.listen(process.env.PORT || 8800, () => {
+app.listen(port, () => {
   connect();
   console.log("Connected to Backend");
 });

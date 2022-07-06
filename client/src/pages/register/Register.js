@@ -25,7 +25,7 @@ const Register = () => {
     e.preventDefault();
     //   console.log(credentials)
     try {
-      const res = await axios.post("/auth/register", credentials);
+      const res = await axios.post("/api/auth/register", credentials);
       // console.log(res.data)
       setRegistered(true);
       setCredentials({});

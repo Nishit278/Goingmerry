@@ -19,31 +19,35 @@
 }
 .name {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 80%;
-  gap: 10px;
+  /* gap: 10px; */
 }
-.register>input {
+.name > input {
   border: none;
   outline: none;
   border-bottom: 2px solid rgb(0, 136, 255);
-  padding: 5px;
+  /* padding: 5px; */
   height: 30px;
   margin-bottom: 20px;
-}
-.name > input {
-  width: 50%;
+  width: 40%;
 }
 .others{
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 .others > input {
-  width: 80%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(0, 136, 255);
+  padding: 5px;
+  height: 30px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .submitBtn{
