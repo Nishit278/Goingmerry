@@ -1,0 +1,60 @@
+
+.login {
+  height: 100vh;
+  background-color:aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lContainer {
+  display: flex;
+  width: 30%;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  gap: 10px;
+}
+
+.lInput{
+  height: 50px;
+  width: 80%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #0071c2;
+  margin-bottom: 20px;
+}
+
+.lButton {
+  border: none;
+  padding:10px 20px;
+  width: 80%;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 15px ;
+}
+
+.lButton:disabled{
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+.signupLink{
+  text-decoration: none;
+  color:#0071c2
+}
+.errorMessage{
+  color: rgb(187, 37, 54);
+}
+.register>span{
+    font-size: 12px;
+}
