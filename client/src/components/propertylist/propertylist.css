@@ -1,34 +1,48 @@
-.pList{
+.pList {
   width: 100%;
   max-width: 1024px;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
+  overflow: scroll;
+  flex-wrap: wrap;
 }
 
-.pListItem{
-  flex:1;
-  border-radius: 10px;
+.pListItem {
+  flex: 2;
+  /* border-radius: 10px; */
   overflow: hidden;
   cursor: pointer;
 }
 
-.pListImg{
-  width: 100%;
-  height: 150px;
+.pListImg {
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 
-.pListTitles>h1{
+.pListTitles > h1 {
   font-size: 18px;
   color: #444;
   text-transform: capitalize;
-
 }
 
-.pListTitles>h2{
+.pListTitles > h2 {
   font-size: 14px;
   font-weight: 300;
   text-transform: capitalize;
+}
 
+@media screen and (max-width: 965px) {
+  .pList {
+    /* background-color: blue; */
+    width: 1920px;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 400px) {
 }

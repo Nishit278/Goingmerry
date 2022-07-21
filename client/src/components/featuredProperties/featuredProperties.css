@@ -6,33 +6,34 @@
   gap: 20px;
 }
 
-.fpItem{
+.fpItem {
+  cursor: pointer;
   flex: 1;
   gap: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.fpImg{
+.fpImg {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
-.fpName{
+.fpName {
   color: #333;
   font-weight: bold;
 }
 
-.fpCity{
+.fpCity {
   font-weight: 300;
 }
 
-.fpPrice{
+.fpPrice {
   font-weight: 500;
 }
 
-.fpRating>button{
+.fpRating > button {
   background-color: #003580;
   color: white;
   border: none;
@@ -41,6 +42,43 @@
   font-weight: bold;
 }
 
-.fpRating>span{
+.fpRating > span {
   font-size: 14px;
+}
+
+@media screen and (max-width: 965px) {
+}
+
+@media screen and (max-width: 890px) {
+  .fp {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 2fr 2fr;
+    gap: 15px;
+    padding: 0 10px;
+  }
+  .fpItem {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .fp {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fpItem {
+    /* height: 300px; */
+    width: 90%;
+    /* padding: 0 10px; */
+  }
+  .fpImg {
+    height: 300px;
+    object-fit: cover;
+  }
 }
